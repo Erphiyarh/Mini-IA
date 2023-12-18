@@ -1,8 +1,9 @@
 import express from "express";
-import { DB_CONNECT } from "./database";
-
+import { DB_CONNECT } from "./database/index.js";
+import dotenv from "dotenv"
+import PATIENTROUTES from "./routes/patient.routes.js"
 const APP = express();
-
+dotenv.config()
 APP.use(express.json());
 
 APP.use("/api/patients", PATIENTROUTES);

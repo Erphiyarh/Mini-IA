@@ -3,7 +3,7 @@ import {
   AddPatient,
   GetPatients,
   GetPatient,
-} from "../controllers/patient.controller";
+} from "../controllers/patient.controllers.js";
 const router = Router();
 
 router.post("/", AddPatient);
